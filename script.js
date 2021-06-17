@@ -4,12 +4,19 @@ function compute()
     r = document.getElementById("rate").value;
     t = document.getElementById("years").value;
 
+    if(parseInt(p)<=0)
+    {
+        alert('Please enter a positive number');
+        document.getElementById("principal").focus();
+        return;
+    }
+        
     let ans = p*(1+(r*t));
     res = document.getElementById("result");
     
     let y = parseInt(t)+parseInt(2020);
 
-    res.innerHTML ="<br>If you deposit "+p+",<br>at an interest rate of "+r+"%.<br>You will recieve an amount of "+ans+".<br>in the year "+y+"<br>";
+    res.innerHTML ="<br>If you deposit <mark>"+p+"</mark>,<br>at an interest rate of <mark>"+r+"%</mark>.<br>You will recieve an amount of <mark>"+ans+"</mark>.<br>in the year <mark>"+y+"</mark><br>";
     
 }
 
