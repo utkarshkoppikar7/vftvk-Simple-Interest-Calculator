@@ -4,7 +4,7 @@ function compute()
     r = document.getElementById("rate").value;
     t = document.getElementById("years").value;
 
-    if(parseInt(p)<=0)
+    if(parseInt(p)<=0 || p=="")
     {
         alert('Please enter a positive number');
         document.getElementById("principal").focus();
